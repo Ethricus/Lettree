@@ -11,18 +11,26 @@ namespace Lettree.Runtime
     class TreeNode
     {
          protected TreeNode parent;
-         protected List<TreeNode> children; 
+         public TreeNode[] children { public get; private set; 
          public NodeState state { public get; private set; }
          
-         Start()
+         void Start()
          {
               children = new();
          }
 
-         // add child 
-         // remove child 
-         // abort 
-         // Tick function 
+        public TreeNode GetChildNode(int index)
+        {
+            return children[index];
+        }
+
+        public List<T> GetChildNodes<T>()
+        {
+        }
+
+        public bool HasChildOfType<T>()
+
+        public bool HasChildren()
     }
 
 } 
